@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tenant Dashboard | PG Management</title>
+  <link rel="stylesheet" href="Tdashboard.css"/>
+</head>
+
+<body>
+  <!-- Navigation Bar with Welcome Message -->
+  <nav class="navbar">
+    <div class="logo">🏠 PG Management</div>
+    <div class="welcome-msg">Welcome, <span id="tenantName">Tenant</span> 👋</div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">My Bookings</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">Register Complaint</a></li>
+      <li><a href="#">Profile</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main PG Section -->
+  <main>
+    <section class="pg-section">
+      <div class="search-bar">
+        <input type="text" id="searchBar" placeholder="Search PGs by name or location..." autocomplete="off">
+        <button id="searchBtn"><i class="fas fa-search"></i></button>
+        <ul id="suggestions"></ul>
+      </div>
+
+      <div class="pg-listings" id="pgCards"></div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 PG Management System | All rights reserved.</p>
+  </footer>
+
+  <script src="Tdashboard.js"></script>
+</body>
+</html>

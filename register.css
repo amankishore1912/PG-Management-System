@@ -1,0 +1,236 @@
+/* ===== Global Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #f5f7fa;
+}
+
+/* ===== Fullscreen Layout ===== */
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* ===== Left Panel ===== */
+.left-panel {
+  width: 38%;
+  background-color: #2e7d87;
+  color: white;
+  padding: 50px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  text-align: left;
+}
+
+.logo span {
+  font-size: 40px;
+}
+
+.logo h2 {
+  font-size: 28px;
+  line-height: 1.4;
+  margin-top: 12px;
+}
+
+/* ===== Right Panel ===== */
+.right-panel {
+  width: 62%;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+/* ===== Form Card (Scrollable) ===== */
+.form-box {
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-box::-webkit-scrollbar {
+  width: 6px;
+}
+.form-box::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 4px;
+}
+
+/* ===== Titles ===== */
+.form-box h2 {
+  font-size: 22px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-box p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+/* ===== Form Styling ===== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input,
+select {
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  transition: border 0.2s ease;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #2e7d87;
+  box-shadow: 0 0 5px rgba(46, 125, 135, 0.2);
+}
+
+/* ===== Phone Fields ===== */
+.phone-group {
+  display: flex;
+  gap: 10px;
+}
+
+.phone-group select {
+  width: 35%;
+}
+
+.phone-group input {
+  width: 65%;
+}
+
+/* ===== Buttons ===== */
+button[type="submit"],
+button[type="reset"] {
+  padding: 12px;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button[type="submit"] {
+  background-color: #2e7d87;
+  color: white;
+}
+
+button[type="submit"]:hover:enabled {
+  background-color: #256b74;
+}
+
+button[type="submit"]:disabled {
+  background-color: #aacfd4;
+  cursor: not-allowed;
+}
+
+button[type="reset"] {
+  background-color: #f3f4f6;
+  color: #2e7d87;
+  border: 1px solid #cbd5e0;
+}
+
+button[type="reset"]:hover {
+  background-color: #e2e8f0;
+}
+
+/* ===== Error Styling ===== */
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: -8px;
+  margin-bottom: 5px;
+}
+
+/* ===== Login Link ===== */
+.login-link {
+  margin-top: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.login-link a {
+  color: #2e7d87;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Responsive Layout ===== */
+@media screen and (max-width: 1000px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left-panel,
+  .right-panel {
+    width: 100%;
+    height: auto;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .form-box {
+    height: auto;
+    max-height: 80vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .form-box h2 {
+    font-size: 20px;
+  }
+
+  .form-box p,
+  .login-link {
+    font-size: 13px;
+  }
+
+  input,
+  select,
+  button {
+    font-size: 13px;
+  }
+
+  .phone-group {
+    flex-direction: column;
+  }
+
+  .phone-group select,
+  .phone-group input {
+    width: 100%;
+  }
+}

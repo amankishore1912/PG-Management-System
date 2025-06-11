@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PG Management System - Home</title>
+  <link rel="stylesheet" href="Home.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">PG Management System</div>
+    <div class="header-right">
+      <div class="auth-buttons">
+        <button class="btn login-btn" onclick="scrollToSection('hero')">Login</button>
+        <button class="btn register-btn" onclick="scrollToSection('hero')">Register</button>
+      </div>
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search by location or name" autocomplete="off" />
+        <span class="search-icon">🔍</span>
+        <ul id="suggestions"></ul>
+      </div>
+      <div class="profile-menu">
+        <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" class="profile-icon" id="profileIcon" />
+        <ul class="dropdown" id="dropdownMenu">
+          <li>My Profile</li>
+          <li>Booking History</li>
+          <li>Payments</li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <h1>Welcome to PG Management System</h1>
+      <p>Find affordable, safe, and verified PGs near you. Book in minutes!</p>
+      <button class="explore-btn" onclick="scrollToSection('pgCardsContainer')">Explore PGs</button>
+    </div>
+  </section>
+
+  <!-- PG CARDS -->
+  <main>
+    <h2>PG Houses</h2>
+    <div class="pg-cards" id="pgCardsContainer"></div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <p> Contact: +91-9876543210 | Email: support@pgmanagement.com</p>
+      <p>&copy; 2025 PG Management System. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="Home.js"></script>
+</body>
+</html>

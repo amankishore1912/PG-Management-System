@@ -1,0 +1,70 @@
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f5f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+}
+
+.icon {
+  font-size: 50px;
+  color: #2e7d87;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #2e7d87;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #2e7d87;
+  border: none;
+  color: white;
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #256b74;
+}
